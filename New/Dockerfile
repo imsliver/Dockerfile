@@ -4,5 +4,6 @@ COPY requirements.txt /tmp/requirements.txt
 RUN pip install -qr /tmp/requirements.txt
 RUN mkdir -p /opt/webapp
 COPY . /opt/webapp
+WORKDIR /opt/webapp
 EXPOSE 5000
 CMD ["python", "app.py"]
