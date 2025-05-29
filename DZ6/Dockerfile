@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt update
-RUN apt install -y openjdk-11-jdk maven tomcat9 git
+RUN apt install -y default-jdk maven tomcat9 git
 RUN git clone https://github.com/cloud-dev-user/java-war-project.git /tmp/java-war-project
 RUN cd /tmp/java-war-project
 RUN mvn package
